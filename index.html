@@ -112,13 +112,13 @@ return convFlows.general[0].text;
 
 function Nav({nav}){
 return(<nav className="nav"><div className="container nav-inner">
-<a className="nav-logo" onClick={e=>{e.preventDefault();nav('home')}}>\u26A1 Callix</a>
+<a className="nav-logo" onClick={e=>{e.preventDefault();nav('home')}}>⚡ Callix</a>
 <div className="nav-links">
 <a onClick={e=>{e.preventDefault();nav('home');setTimeout(()=>{const el=document.getElementById('features');if(el)el.scrollIntoView({behavior:'smooth'})},100)}}>Features</a>
 <a onClick={e=>{e.preventDefault();nav('home');setTimeout(()=>{const el=document.getElementById('pricing');if(el)el.scrollIntoView({behavior:'smooth'})},100)}}>Pricing</a>
 <a onClick={e=>{e.preventDefault();nav('demo')}}>Try Demo</a>
 <a onClick={e=>{e.preventDefault();nav('dashboard')}}>Dashboard</a>
-<button className="btn btn-primary" style={{padding:'10px 24px',fontSize:'0.9rem'}} onClick={()=>nav('demo')}>Get Started Free \u2192</button>
+<button className="btn btn-primary" style={{padding:'10px 24px',fontSize:'0.9rem'}} onClick={()=>nav('demo')}>Get Started Free →</button>
 </div>
 </div></nav>);
 }
@@ -126,23 +126,23 @@ return(<nav className="nav"><div className="container nav-inner">
 function Hero({nav}){
 return(<div className="hero"><div style={{position:'relative',zIndex:1,maxWidth:800}}>
 <div className="orb-wrap fade-in"><div className="orb-ring"><div className="orb"></div><div className="orb-dot"></div><div className="orb-dot"></div><div className="orb-dot"></div></div></div>
-<div className="badge fade-in delay-1">\uD83D\uDE80 AI Voice Agents for Every Business</div>
+<div className="badge fade-in delay-1">🚀 AI Voice Agents for Every Business</div>
 <h1 className="fade-in delay-2" style={{marginTop:24}}>Your AI Sales Team<br/>That <span style={{background:'var(--gradient-1)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>Never Sleeps</span></h1>
 <p className="fade-in delay-3" style={{color:'var(--text-muted)',fontSize:'1.15rem',maxWidth:600,margin:'24px auto 40px'}}>Deploy human-sounding AI voice agents that qualify leads, book meetings, and close deals \u2014 24/7 on your website and phone lines. Set up in 10 minutes, no code required.</p>
 <div className="fade-in delay-4" style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap'}}>
-<button className="btn btn-primary" onClick={()=>nav('demo')}>Start Free Trial \u2192</button>
+<button className="btn btn-primary" onClick={()=>nav('demo')}>Start Free Trial →</button>
 <button className="btn btn-secondary" onClick={()=>nav('demo')}>Watch Demo</button>
 </div>
 </div></div>);
 }
 function Features(){
 const items=[
-{icon:'\uD83E\uDDE0',title:'Smart Conversations',desc:'Natural language AI that understands context, handles objections, and guides callers to outcomes.'},
-{icon:'\u23F0',title:'24/7 Availability',desc:'Never miss a lead. Your AI agents work around the clock, weekends and holidays included.'},
-{icon:'\uD83D\uDD17',title:'CRM Integration',desc:'Seamlessly syncs with Salesforce, HubSpot, and 50+ tools. Every call logged automatically.'},
-{icon:'\uD83D\uDCCA',title:'Real-time Analytics',desc:'Live dashboards showing call volume, conversion rates, sentiment analysis, and more.'},
-{icon:'\uD83C\uDF10',title:'Multi-language',desc:'Speak your customers language. Support for 40+ languages with native-quality voices.'},
-{icon:'\uD83C\uDFA4',title:'Custom Voices',desc:'Create unique voice personas that match your brand. Professional, friendly, or authoritative.'}
+{icon:'🧠',title:'Smart Conversations',desc:'Natural language AI that understands context, handles objections, and guides callers to outcomes.'},
+{icon:'⏰',title:'24/7 Availability',desc:'Never miss a lead. Your AI agents work around the clock, weekends and holidays included.'},
+{icon:'🔗',title:'CRM Integration',desc:'Seamlessly syncs with Salesforce, HubSpot, and 50+ tools. Every call logged automatically.'},
+{icon:'📊',title:'Real-time Analytics',desc:'Live dashboards showing call volume, conversion rates, sentiment analysis, and more.'},
+{icon:'🌐',title:'Multi-language',desc:'Speak your customers language. Support for 40+ languages with native-quality voices.'},
+{icon:'🎤',title:'Custom Voices',desc:'Create unique voice personas that match your brand. Professional, friendly, or authoritative.'}
 ];
 return(<div className="section" id="features"><div className="container" style={{textAlign:'center'}}>
 <div className="badge fade-in">Features</div>
@@ -184,7 +184,7 @@ return(<div className="section" id="pricing"><div className="container" style={{
 <h3>{p.name}</h3>
 <div style={{margin:'16px 0'}}><span style={{fontSize:'3rem',fontWeight:800}}>${p.price}</span><span style={{color:'var(--text-muted)'}}>/month</span></div>
 <ul style={{listStyle:'none',marginBottom:32,textAlign:'left'}}>
-{p.features.map((f,j)=><li key={j} style={{padding:'8px 0',color:'var(--text-muted)',fontSize:'0.95rem'}}>\u2713 {f}</li>)}
+{p.features.map((f,j)=><li key={j} style={{padding:'8px 0',color:'var(--text-muted)',fontSize:'0.95rem'}}>✓ {f}</li>)}
 </ul>
 <button className={p.featured?"btn btn-primary":"btn btn-secondary"} style={{width:'100%',justifyContent:'center'}} onClick={()=>nav('demo')}>{p.cta}</button>
 </div>)}
@@ -196,14 +196,14 @@ function CTA({nav}){
 return(<div className="cta-section">
 <h2 className="fade-in" style={{marginBottom:16}}>Ready to Transform Your<br/><span style={{background:'var(--gradient-1)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>Customer Calls?</span></h2>
 <p className="fade-in delay-1" style={{color:'var(--text-muted)',fontSize:'1.1rem',maxWidth:500,margin:'0 auto 32px'}}>Join thousands of businesses using Callix to automate their voice communications.</p>
-<button className="btn btn-primary fade-in delay-2" onClick={()=>nav('demo')}>Start Free Trial \u2192</button>
+<button className="btn btn-primary fade-in delay-2" onClick={()=>nav('demo')}>Start Free Trial →</button>
 </div>);
 }
 
 function Footer({nav}){
 return(<footer className="footer"><div className="container">
 <div className="footer-grid">
-<div><div className="nav-logo" style={{marginBottom:16,cursor:'pointer'}} onClick={()=>nav('home')}>\u26A1 Callix</div><p style={{color:'var(--text-muted)',fontSize:'0.9rem',maxWidth:250}}>AI-powered voice agents for sales, support, and marketing teams.</p></div>
+<div><div className="nav-logo" style={{marginBottom:16,cursor:'pointer'}} onClick={()=>nav('home')}>⚡ Callix</div><p style={{color:'var(--text-muted)',fontSize:'0.9rem',maxWidth:250}}>AI-powered voice agents for sales, support, and marketing teams.</p></div>
 <div><h4 style={{marginBottom:16,fontSize:'0.85rem',color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'0.05em'}}>Product</h4>
 <div style={{display:'flex',flexDirection:'column',gap:10}}><a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem',cursor:'pointer'}} onClick={()=>nav('demo')}>Try Demo</a><a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem',cursor:'pointer'}} onClick={()=>nav('dashboard')}>Dashboard</a></div></div>
 <div><h4 style={{marginBottom:16,fontSize:'0.85rem',color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'0.05em'}}>Company</h4>
@@ -211,7 +211,7 @@ return(<footer className="footer"><div className="container">
 <div><h4 style={{marginBottom:16,fontSize:'0.85rem',color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'0.05em'}}>Legal</h4>
 <div style={{display:'flex',flexDirection:'column',gap:10}}><a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem'}}>Privacy</a><a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem'}}>Terms</a></div></div>
 </div>
-<div style={{borderTop:'1px solid var(--border)',marginTop:40,paddingTop:24,textAlign:'center',color:'var(--text-muted)',fontSize:'0.85rem'}}>\u00A9 2024 Callix. All rights reserved.</div>
+<div style={{borderTop:'1px solid var(--border)',marginTop:40,paddingTop:24,textAlign:'center',color:'var(--text-muted)',fontSize:'0.85rem'}}>© 2024 Callix. All rights reserved.</div>
 </div></footer>);
 }
 function DemoPage({nav}){
@@ -235,33 +235,33 @@ r.onend=()=>setListening(false);r.onerror=()=>setListening(false);
 recognitionRef.current=r;r.start();setListening(true);
 };
 return(<div className="demo-container">
-<a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem',display:'inline-flex',alignItems:'center',gap:8,marginBottom:24,cursor:'pointer'}} onClick={e=>{e.preventDefault();nav('home')}}>\u2190 Back to Home</a>
+<a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.9rem',display:'inline-flex',alignItems:'center',gap:8,marginBottom:24,cursor:'pointer'}} onClick={e=>{e.preventDefault();nav('home')}}>← Back to Home</a>
 <div style={{textAlign:'center',marginBottom:32}}>
 <div style={{width:60,height:60,borderRadius:'50%',background:'var(--gradient-1)',margin:'0 auto 16px',display:'flex',alignItems:'center',justifyContent:'center',boxShadow:speaking?'0 0 40px rgba(108,58,237,0.6)':'0 0 20px rgba(108,58,237,0.3)',transition:'box-shadow 0.3s',animation:speaking?'pulse-ring 1.5s ease-in-out infinite':'none'}}>
-<span style={{fontSize:'1.5rem'}}>\uD83E\uDD16</span></div>
+<span style={{fontSize:'1.5rem'}}>🤖</span></div>
 <h2>Try Callix Voice Agent</h2>
 <p style={{color:'var(--text-muted)',marginTop:8}}>Type a message or click the mic to speak</p></div>
 <div className="chat-box" ref={chatRef}>
-{messages.map((m,i)=><div key={i} className={"msg "+(m.role==='ai'?'msg-ai':'msg-user')}>{m.role==='ai'&&<span style={{marginRight:6}}>\uD83E\uDD16</span>}{m.text}</div>)}
+{messages.map((m,i)=><div key={i} className={"msg "+(m.role==='ai'?'msg-ai':'msg-user')}>{m.role==='ai'&&<span style={{marginRight:6}}>🤖</span>}{m.text}</div>)}
 </div>
 <div className="chat-input">
 <input value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==='Enter')sendMessage(input)}} placeholder="Type your message..."/>
 <button className="btn btn-primary" style={{padding:'12px 24px'}} onClick={()=>sendMessage(input)}>Send</button>
-<button className={"mic-btn"+(listening?' active':'')} onClick={toggleMic}>{listening?'\u23F9':'\uD83C\uDF99'}</button>
+<button className={"mic-btn"+(listening?' active':'')} onClick={toggleMic}>{listening?'⏹':'🎙'}</button>
 </div>
 </div>);
 }
 function DashboardPage({nav}){
 const[tab,setTab]=React.useState('overview');
-const tabs=[{id:'overview',icon:'\uD83D\uDCCA',label:'Overview'},{id:'agents',icon:'\uD83E\uDD16',label:'Agents'},{id:'builder',icon:'\uD83D\uDEE0',label:'Builder'},{id:'integrations',icon:'\uD83D\uDD17',label:'Integrations'},{id:'analytics',icon:'\uD83D\uDCC8',label:'Analytics'},{id:'settings',icon:'\u2699',label:'Settings'}];
+const tabs=[{id:'overview',icon:'📊',label:'Overview'},{id:'agents',icon:'🤖',label:'Agents'},{id:'builder',icon:'🛠',label:'Builder'},{id:'integrations',icon:'🔗',label:'Integrations'},{id:'analytics',icon:'📈',label:'Analytics'},{id:'settings',icon:'⚙',label:'Settings'}];
 return(<div className="dashboard">
 <div className="sidebar">
-<div className="sidebar-logo" onClick={()=>nav('home')}>\u26A1 Callix</div>
+<div className="sidebar-logo" onClick={()=>nav('home')}>⚡ Callix</div>
 <div className="sidebar-nav">
 {tabs.map(t=><a key={t.id} className={tab===t.id?'active':''} onClick={()=>setTab(t.id)}>{t.icon} {t.label}</a>)}
 </div>
 <div style={{padding:'16px 24px',borderTop:'1px solid var(--border)'}}>
-<a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.85rem',cursor:'pointer'}} onClick={()=>nav('home')}>\u2190 Back to Site</a>
+<a style={{color:'var(--text-muted)',textDecoration:'none',fontSize:'0.85rem',cursor:'pointer'}} onClick={()=>nav('home')}>← Back to Site</a>
 </div>
 </div>
 <div className="dash-main">
@@ -363,7 +363,7 @@ return(<div className="dashboard">
 </div>
 <div className="card" style={{padding:24}}>
 <h3 style={{marginBottom:16}}>API Access</h3>
-<div style={{display:'flex',gap:8}}><input type="text" readOnly value={"clx_sk_"+"\u2022".repeat(24)} style={{flex:1,maxWidth:400,padding:'10px 14px',borderRadius:10,border:'1px solid var(--border)',background:'var(--bg)',color:'var(--text-muted)',fontSize:'0.9rem',fontFamily:'inherit'}}/>
+<div style={{display:'flex',gap:8}}><input type="text" readOnly value={"clx_sk_"+"•".repeat(24)} style={{flex:1,maxWidth:400,padding:'10px 14px',borderRadius:10,border:'1px solid var(--border)',background:'var(--bg)',color:'var(--text-muted)',fontSize:'0.9rem',fontFamily:'inherit'}}/>
 <button className="btn btn-secondary" style={{padding:'10px 16px',fontSize:'0.85rem'}}>Regenerate</button></div>
 </div></div>}
 </div></div>);
